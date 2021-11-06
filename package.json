@@ -1,0 +1,19 @@
+{
+  "name": "knowledge-management-systems",
+  "version": "1.0.0",
+  "description": "knowledge-management, notes, tasks, planning, app",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill-leonidovich/knowledge-management-systems.git"
+  },
+  "author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirill-leonidovich/knowledge-management-systems/issues"
+  },
+  "homepage": "https://github.com/kirill-leonidovich/knowledge-management-systems#readme"
+}
