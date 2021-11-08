@@ -1,7 +1,7 @@
 {
   "name": "knowledge-management-systems",
   "version": "1.0.0",
-  "description": "knowledge-management, notes, tasks, planning, app",
+  "description": "Business planning. Assignment of tasks. Managing your schedule.",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js"
@@ -10,6 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/kirill-leonidovich/knowledge-management-systems.git"
   },
+  "keywords": [
+		"knowledge-management",
+		"tasks",
+		"planning",
+    "app"
+	],
   "author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
   "license": "ISC",
   "bugs": {
