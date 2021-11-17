@@ -9,9 +9,9 @@
     "noImplicitAny": true,
     "strictNullChecks": true
   },
-  "files": [ // файлы которые будут помпилороваться
-    "index.ts"
-  ],
+  // "files": [ // файлы которые будут помпилороваться
+  //   "index.ts"
+  // ],
   "exclude": [
     "node_modules"
   ],// файлы которые не будут помпилороваться
