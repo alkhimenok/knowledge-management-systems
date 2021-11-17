@@ -1,3 +1,6 @@
-body {
-  background-color: blue;
+$blue: blue;
+
+.hello {
+  background-color: $blue;
+  position: absolute;
 }
