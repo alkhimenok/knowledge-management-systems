@@ -3,7 +3,7 @@
     "target": "ES3",
     "removeComments": true,
     // "outFile": "dist/index.js", // в какой файл будет компилироваться весь проект
-    "outDir": "dist",
+    "outDir": "client/dist",
     "sourceMap": true,
     "watch": true,
     "noImplicitAny": true,
