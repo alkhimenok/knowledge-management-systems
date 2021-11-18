@@ -1,5 +1,6 @@
 import './index.html'
 import './styles/main.scss'
+import 'normalize.css'
 
 const str: string = 'Hello world!'
 const num: number = 42
