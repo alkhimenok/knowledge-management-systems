@@ -1,32 +1,58 @@
 {
-  "name": "knowledge-management-systems",
-  "version": "1.0.0",
-  "description": "Business planning. Assignment of tasks. Managing your schedule.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node client/dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kirill-leonidovich/knowledge-management-systems.git"
-  },
-  "keywords": [
-    "knowledge-management",
-    "tasks",
-    "planning",
-    "app"
-  ],
-  "author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kirill-leonidovich/knowledge-management-systems/issues"
-  },
-  "homepage": "https://github.com/kirill-leonidovich/knowledge-management-systems#readme",
-  "devDependencies": {
-    "stylelint": "^14.1.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0",
-    "typescript": "^4.4.4"
-  }
+	"name": "knowledge-management-systems",
+	"version": "1.0.0",
+	"description": "Business planning. Assignment of tasks. Managing your schedule.",
+	"main": "index.js",
+	"scripts": {
+		"webpackdev": "cross-env NODE_ENV=development webpack",
+		"webpackbuild": "cross-env NODE_ENV=production webpack",
+		"webpackwatch": "cross-env NODE_ENV=development webpack-dev-server --open",
+		"serverstart": "node app.js",
+		"serverwatch": "nodemon app.js",
+		"dev": "concurrently \"npm run webpackdev\" \"npm run serverwatch\"",
+		"prod": "concurrently \"npm run webpackbuild\" \"npm run serverstart\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kirill-leonidovich/knowledge-management-systems.git"
+	},
+	"keywords": [
+		"knowledge-management",
+		"tasks",
+		"planning",
+		"app"
+	],
+	"author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/kirill-leonidovich/knowledge-management-systems/issues"
+	},
+	"homepage": "https://github.com/kirill-leonidovich/knowledge-management-systems#readme",
+	"devDependencies": {
+		"autoprefixer": "^10.4.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"concurrently": "^6.4.0",
+		"cross-env": "^7.0.3",
+		"css-loader": "^6.5.1",
+		"css-mqpacker": "^7.0.0",
+		"cssnano": "^5.0.11",
+		"html-loader": "^3.0.1",
+		"html-webpack-plugin": "^5.5.0",
+		"mini-css-extract-plugin": "^2.4.5",
+		"nodemon": "^2.0.15",
+		"postcss": "^8.3.11",
+		"postcss-loader": "^6.2.0",
+		"sass": "^1.43.4",
+		"sass-loader": "^12.3.0",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.2.6",
+		"typescript": "^4.5.2",
+		"webpack": "^5.64.1",
+		"webpack-cli": "^4.9.1",
+		"webpack-dev-server": "^4.5.0"
+	},
+	"dependencies": {
+		"config": "^3.3.6",
+		"express": "^4.17.1"
+	}
 }
