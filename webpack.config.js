@@ -44,8 +44,9 @@ const getDevtool = mode => {
 module.exports = {
 	mode: getMode(isDev),
 	devtool: getDevtool(isDev),
+	context: path.resolve(__dirname, 'client', 'src'),
 	entry: {
-		main: './client/src/index.ts',
+		main: './index.ts',
 	},
 	performance: {
 		maxEntrypointSize: 512000,
@@ -78,7 +79,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './client/src/index.html',
+			template: './index.html',
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css',
