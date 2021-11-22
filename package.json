@@ -2,7 +2,7 @@
 	"name": "knowledge-management-systems",
 	"version": "1.0.0",
 	"description": "Business planning. Assignment of tasks. Managing your schedule.",
-	"main": "index.js",
+	"main": "app.js",
 	"scripts": {
 		"fixsass": "stylelint \"./client/src/styles/**/*.scss\" --fix",
 		"webpackdev": "cross-env NODE_ENV=development webpack",
@@ -60,6 +60,7 @@
 	"dependencies": {
 		"config": "^3.3.6",
 		"express": "^4.17.1",
+		"mongoose": "^6.0.13",
 		"normalize.css": "^8.0.1"
 	}
 }
