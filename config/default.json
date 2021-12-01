@@ -1,4 +1,0 @@
-{
-  "port": 5000,
-  "databaseURL": "mongodb+srv://kirill-leonidovich:Alkhimenok2001@cluster.nfvga.mongodb.net/kms?retryWrites=true&w=majority"
-}
