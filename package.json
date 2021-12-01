@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/kirill-leonidovich/knowledge-management-systems.git"
+		"url": "git+https://github.com/alkhimenok/knowledge-management-systems.git"
 	},
 	"keywords": [
 		"knowledge-management",
@@ -26,9 +26,9 @@
 	"author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/kirill-leonidovich/knowledge-management-systems/issues"
+		"url": "https://github.com/alkhimenok/knowledge-management-systems/issues"
 	},
-	"homepage": "https://github.com/kirill-leonidovich/knowledge-management-systems#readme",
+	"homepage": "https://github.com/alkhimenok/knowledge-management-systems#readme",
 	"devDependencies": {
 		"autoprefixer": "^10.4.0",
 		"clean-webpack-plugin": "^4.0.0",
