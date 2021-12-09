@@ -6,8 +6,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const PORT = config.get('port')
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = !isDev
+const isProd = process.env.NODE_ENV === 'production'
+const isDev =  !isProd
 
 const getPostCSSLoader = plugin => {
 	return {
