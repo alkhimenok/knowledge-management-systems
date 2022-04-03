@@ -2,21 +2,16 @@
 	"name": "knowledge-management-systems",
 	"version": "1.0.0",
 	"description": "",
-	"main": "app.js",
+	"main": "index.js",
 	"scripts": {
-		"fixsass": "stylelint \"./client/src/styles/**/*.scss\" --fix",
-		"clientbuild": "webpack",
-		"clientwatch": "webpack-dev-server --open",
-		"serverstart": "node app.js",
-		"serverwatch": "nodemon app.js",
-		"dev": "cross-env NODE_ENV=development concurrently \"npm run clientbuild\" \"npm run serverwatch\"",
-		"prod": "cross-env NODE_ENV=production concurrently \"npm run clientbuild\" \"npm run serverstart\""
+		"format": "prettier --write .",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/alkhimenok/knowledge-management-systems.git"
 	},
-	"keywords": [],
 	"author": "Kirill Alkhimenok <alkhimenok.kirill.leonidovich@gmail.com>",
 	"license": "ISC",
 	"bugs": {
@@ -24,37 +19,28 @@
 	},
 	"homepage": "https://github.com/alkhimenok/knowledge-management-systems#readme",
 	"devDependencies": {
-		"autoprefixer": "^10.4.0",
-		"clean-webpack-plugin": "^4.0.0",
-		"concurrently": "^6.4.0",
-		"cross-env": "^7.0.3",
-		"css-loader": "^6.5.1",
-		"css-mqpacker": "^7.0.0",
-		"cssnano": "^5.0.12",
-		"file-loader": "^6.2.0",
-		"mini-css-extract-plugin": "^2.4.5",
-		"nodemon": "^2.0.15",
-		"normalize.css": "^8.0.1",
-		"postcss": "^8.4.5",
-		"postcss-loader": "^6.2.1",
-		"sass": "^1.45.0",
-		"sass-loader": "^12.4.0",
-		"style-loader": "^3.3.1",
-		"stylelint": "^14.1.0",
-		"stylelint-config-recess-order": "^3.0.0",
-		"stylelint-config-standard": "^24.0.0",
-		"stylelint-config-standard-scss": "^2.0.1",
-		"stylelint-order": "^5.0.0",
-		"ts-loader": "^9.2.6",
-		"typescript": "^4.5.4",
-		"webpack": "^5.65.0",
-		"webpack-cli": "^4.9.1"
+		"eslint": "^8.12.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-react": "^7.29.4",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.3.7",
+		"prettier": "2.6.2"
 	},
-	"dependencies": {
-		"config": "^3.3.6",
-		"ejs": "^3.1.6",
-		"express": "^4.17.1",
-		"mongoose": "^6.0.13",
-		"normalize.css": "^8.0.1"
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*": [
+			"stylelint --fix",
+			"git add"
+		],
+		"*.js": [
+			"npm run format",
+			"git add"
+		]
 	}
 }
