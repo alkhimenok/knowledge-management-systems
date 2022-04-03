@@ -1,0 +1,102 @@
+{
+	"root": true,
+	"parser": "@babel/eslint-parser",
+	"plugins": ["react", "prettier"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:import/recommended",
+		"plugin:prettier/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": 13,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"amd": true,
+		"commonjs": true,
+		"worker": true,
+		"react-native/react-native": true
+	},
+	"rules": {
+		// default
+		"indent": "off",
+		"no-console": "warn",
+		"no-extra-parens": "off",
+		"dot-location": "off",
+		"no-implicit-coercion": "off",
+		"no-invalid-this": "off",
+		"no-magic-numbers": "off",
+		"no-warning-comments": "off",
+		"radix": ["error", "as-needed"],
+		"no-unused-vars": "warn",
+		"no-use-before-define": "off",
+		"global-require": "warn",
+		"no-process-env": "off",
+		"no-process-exit": "off",
+		"camelcase": "warn",
+		"func-names": "warn",
+		"id-length": "off",
+		"jsx-quotes": ["error", "prefer-single"],
+		"max-len": [
+			"error",
+			{
+				"code": 80,
+				"tabWidth": 2,
+				"comments": 65,
+				"ignoreComments": true,
+				"ignoreTrailingComments": true,
+				"ignoreUrls": true,
+				"ignoreStrings": true,
+				"ignoreTemplateLiterals": true,
+				"ignoreRegExpLiterals": true
+			}
+		],
+		"max-params": "off",
+		"max-statements": "off",
+		"new-cap": "off",
+		"no-inline-comments": "off",
+		"no-lonely-if": "off",
+		"no-negated-condition": "off",
+		"no-ternary": "off",
+		"object-curly-spacing": "off",
+		"one-var": ["error", "never"],
+		"padded-blocks": [
+			"error",
+			{ "blocks": "never", "classes": "never", "switches": "never" }
+		],
+		"quote-props": ["error", "as-needed"],
+		"quotes": ["error", "single"],
+		"require-jsdoc": "error",
+		"semi": ["error", "never"],
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": true,
+				"ignoreDeclarationSort": true,
+				"ignoreMemberSort": true,
+				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+				"allowSeparatedGroups": true
+			}
+		],
+		"space-before-function-paren": "off",
+		"no-tabs": ["warn", { "allowIndentationTabs": true }],
+		"arrow-body-style": "off",
+		"no-confusing-arrow": "off",
+		"object-shorthand": "off",
+		// react
+		"react/prop-types": "warn",
+		// import
+		"import/no-unresolved": "warn",
+		"import/named": "off",
+		// prettier
+		"prettier/prettier": "warn"
+	}
+}
+
